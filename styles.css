@@ -1,0 +1,628 @@
+:root{
+    --bgPurple: #753FF6;
+    --lightAsh: #A6A7AF;
+    --lighterAsh: #E5E5E5;
+    --thickAsh: #BBBBBB;
+    --textDark: #171826;
+    --shopsYellow: #FFAD0D;
+    --groupsGreen: #22AD80;
+    --ctaGrey: #212337;
+    font-size: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: einaBold;
+    src: url(./fonts/Eina1/Eina01-Bold.ttf);
+}
+
+@font-face {
+    font-family: einaRegular;
+    src: url(./fonts/Eina1/Eina01-Regular.ttf);
+}
+
+
+/*Base/Utility styles*/
+h1 {
+    font-family: einaBold;
+    font-size: 3.9rem;
+    line-height: 4.5rem;
+}
+
+h3 {
+    font-family: einaBold;
+    font-size: 2.8rem;
+    line-height: 3.5rem;
+}
+
+h2, .sticky-nav h3 {
+    font-family: einaBold;
+    font-size: 1.2rem;
+    line-height: 2.4rem;
+}
+
+p {
+    font-family: einaRegular;
+    font-size: 1.2rem;
+    line-height: 2.4rem;
+    color: var(--lighterAsh);
+}
+
+.hero-texts p {
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+.big-p {
+    font-family: einaBold;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+}
+
+.big-p span {
+    font-family: einaBold;
+}
+
+
+h4 {
+    font-family: einaBold;
+    font-size: 2.6rem;
+    line-height: 3.2rem;
+}
+
+.container {
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-family: einaBold;
+}
+
+.btn {
+    display: block;
+    margin: 0 auto;
+    margin-top: 1rem;
+    max-width: 15rem;
+    background: white;
+    color: var(--textDark);
+    padding: 1rem;
+    border-radius: 2.5rem;
+}
+
+/*Hero Section*/
+
+#hero-section {
+    background: var(--bgPurple);
+    color: white;
+    /* padding-top: 3rem; */
+    overflow: hidden;
+}
+
+#hero-section .container {
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#hero-section .container h1 {
+    margin-bottom: 2rem;
+}
+
+.hero-texts p {
+    margin-bottom: 2rem;
+}
+
+.hero-texts .logo {
+    width:20%;
+    margin: 0 auto;
+    text-align: center;
+    align-self: center;
+    background: white;
+    margin-bottom: 6rem;
+}
+
+.skews {
+    display: none;
+}
+
+.btn i {
+    margin-right: 1rem;
+    font-size: 1.8rem;
+}
+
+.hero-image {
+    position: relative;
+    top: 65px;
+}
+
+/*Image Section*/
+
+#image-section  {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+#image-section h2 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: var(--lightAsh);
+}
+
+.first-imgages-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 5rem;
+    justify-content: space-around;
+    margin: 5rem 0;
+}
+
+.second-imgages-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5rem;
+    align-items: center;
+    /* margin-top: 10rem; */
+}
+
+/*Video Section*/
+iframe {
+    border-radius: 2rem;
+    margin-top: 10rem;
+}
+
+/*FEATURES SECTION*/
+
+/*Navigation*/
+#features-section{
+    margin-top: 10rem;
+    text-align: center;
+}
+
+#sticky-nav {
+    background: var(--lighterAsh);
+    border-radius: 2rem;
+    padding: 0.5rem;
+    margin-bottom: 3rem;
+    position: sticky;
+    top: 4rem;
+}
+
+.sticky-container {
+    display: flex;
+}
+
+.sticky-container *{
+    width: 100%;
+    cursor: pointer;
+}
+
+#sticky-nav h3 {
+    padding: 0.5rem 0.5rem;
+    border-radius: 2rem;
+    font-size: 1.3rem;
+    line-height: 2.4rem;
+    /* text-align: center; */
+}
+
+.current {
+    transition: background linear 1s;
+    color: white;
+}
+
+.pay.current {
+    background: var(--bgPurple);
+}
+
+.shop.current {
+    background: var(--shopsYellow);
+}
+
+.group.current {
+    background: var(--groupsGreen);
+}
+
+.card.current {
+    background: var(--textDark);
+}
+
+
+
+#features-section .big-p {
+    color: var(--lightAsh);
+    margin-bottom: 6rem;
+}
+
+.payments-flex, .shops-flex, .groups-flex, .cards-flex {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+}
+
+.payments-flex *,
+.shops-flex *,
+.groups-flex *,
+.cards-flex * {
+    margin-bottom: 1rem;
+}
+
+.payments-flex p,
+.shops-flex p,
+.groups-flex p,
+.cards-flex p {
+    color: var(--textDark);
+}
+
+.active {
+    display: block;
+    transition: all ease-in 1.5s;
+}
+
+.inactive {
+    display: none;
+}
+
+.coming-soon {
+    max-width: 15.5rem;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    padding: 0.3rem 0;
+    border-radius: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    font-family: einaBold;
+    color: white;
+    background: var(--thickAsh);
+}
+
+
+/*CTA SECTION*/
+
+.cta {
+    background: repeating-radial-gradient(farthest-side circle at 50% 50%, var(--ctaGrey), var(--textDark) 3%, var(--ctaGrey) 7%, var(--textDark) 9%);
+    color: white;
+    padding: 6rem 3rem;
+    text-align: center;
+    border-radius: 3rem;
+    margin-bottom: 5rem;
+}
+
+.cta h4 {
+    margin-bottom: 1.5rem;
+}
+
+.cta p {
+    color: var(--lightAsh);
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+#cta-section .second-nav {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+}
+
+#cta-section .second-nav a {
+    font-size: 1.4rem;
+    padding: 1rem 2rem;
+    background: var(--lighterAsh);
+    color: var(--textDark);
+    border-radius: 3rem;
+    margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+footer {
+    padding: 6rem 3rem;
+    border-top: 1px solid var(--lighterAsh);
+    text-align: center;
+}
+
+.copyright {
+    margin-bottom: 5rem;
+}
+
+footer .copyright-p, .copyright span {
+    color: var(--thickAsh);
+}
+
+footer .copyright-p {
+    margin-bottom: 2rem;
+}
+
+footer .ownership-p {
+    font-family: einaRegular;
+    color: var(--thickAsh);
+}
+
+.footer-logo, .naija {
+    width: 25%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+.icons {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icons i {
+    color: var(--thickAsh);
+    font-size: 2rem;
+}
+
+
+
+
+
+/*DESKTOP*/
+
+@media(min-width: 990px){
+
+    h1 {
+        font-size: 4.6rem;
+        line-height: 5.2rem;
+    }
+
+    h3 {
+        font-size: 5rem;
+        line-height: 5.5rem;
+    }
+
+    p {
+        font-size: 2rem;
+    }
+
+    h2, .sticky-nav h3 {
+    font-family: einaBold;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    }
+
+    /* p {
+        font-family: einaRegular;
+    } */
+
+    .hero-texts p {
+        font-size: 1.9rem;
+        line-height: 2.6rem;
+        max-width: 50rem;
+    }
+
+    .skews p {
+        font-family: einaBold;
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .big-p {
+        font-size: 2.2rem;
+        line-height: 2.1rem;
+    }
+
+    h4 {
+        font-size: 4.8rem;
+        /* line-height: 3.2rem; */
+    }
+
+    .container {
+        max-width: 1354px;
+    }
+
+    #hero-section{
+        padding-bottom: 10rem;
+        /* padding-top: unset; */
+    }
+
+    #hero-section .container {
+        padding-top: unset;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        
+    }
+
+    .hero-image {
+        position: unset;
+        margin-top: 10rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .hero-image img {
+        width: 70%;
+    }
+
+    .hero-texts .logo {
+        margin: unset;
+        margin-bottom: 6rem;
+    }
+
+    .skews {
+        display: flex;
+        margin-top: 5rem;
+        transform: skewY(40px);
+    }
+
+    .skews p {
+        max-width: 7rem;
+        margin-right: 3rem;
+        color: white;
+        transform: skewY(-2deg);
+    }
+
+    .skews .qr-code img {
+        width: 170%;
+        background: white;
+        border-radius: 1rem;
+        transform: skew(-3deg, 2deg);
+    }
+
+    .hero-cta {
+        display: none;
+    }
+
+/*Image Section*/
+
+    #image-section h2 {
+        font-size: 2.9rem;
+    }
+
+    .first-imgages-container {
+        margin: 10rem 0;
+    }
+
+    .first-imgages-container, .second-imgages-container {
+        grid-gap: 10rem;
+    }
+
+    /*Video Section*/ 
+
+    iframe {
+        height: 70vh;
+    }
+
+    /*FEATURES SECTION*/
+
+
+    /*Navigation*/
+
+    #sticky-nav {
+        border-radius: 4rem;
+    }
+
+    #sticky-nav h3 {
+        padding: 2.5rem;
+        border-radius: 4rem;
+        font-size: 2.9rem;
+        line-height: 2.4rem;
+    }
+
+    /* .pay {
+        background: var(--bgPurple)
+    } */
+
+    /*Features*/
+
+    #features-section .big-p {
+        max-width: 64rem;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 6rem;
+    }
+
+    .payments-flex, .shops-flex, .groups-flex, .cards-flex {
+        padding: 3rem 14rem;
+        /* max-width: 45.7rem;
+        margin: 0 auto; */
+    }
+
+    .payments-flex:nth-of-type(odd),
+    .shops-flex:nth-of-type(odd),
+    .groups-flex:nth-of-type(odd),
+    .cards-flex:nth-of-type(odd) {
+        flex-direction: row-reverse;
+        text-align: left;
+        align-items: center;
+    }
+
+    .payments-flex:nth-of-type(even),
+    .shops-flex:nth-of-type(even),
+    .groups-flex:nth-of-type(even),
+    .cards-flex:nth-of-type(even) {
+        flex-direction: row;
+        text-align: left;
+        align-items: center;
+    }
+
+    .payments-img.left, .shops-img.left, .groups-img.left, .cards-img.left {
+        margin-right: 10rem;
+    }
+
+    .payments-img.right, .shops-img.right,
+    .groups-img.right,
+    .cards-img.right {
+        margin-left: 10rem;
+    }
+
+
+    /*CTA SECTION*/
+    .cta {
+        padding: 10rem 3rem;
+    }
+
+    .cta p {
+        font-size: 2.2rem;
+        max-width: 80rem;
+        margin: 4rem auto;
+    }
+
+    #cta-section .second-nav a {
+        font-size: 2.4rem;
+    }
+
+    .btn {
+        display: inline-block;
+        font-size: 2.5rem;
+        padding: 1.5rem 3rem;
+        border-radius: 3rem;
+        max-width: unset;
+    }
+
+    #cta-section .btn:first-of-type {
+        margin-right: 4rem;
+    }
+
+    #cta-section .btn i {
+        font-size: 3rem;
+    }
+    
+
+    #cta-section .second-nav a {
+        padding: 1.5rem 2.5rem;
+        border-radius: 3rem;
+        margin-right: 3rem;
+    }
+
+    /*FOOTER*/
+
+    footer .ownership-p {
+        margin-bottom: 1rem;
+    }
+
+    .footer-logo, .naija {
+        width: 8%;
+        margin-bottom: 2rem;
+    }
+
+    .icons {
+        margin: 5rem 0;
+        justify-content: center;
+    }
+
+    .icons i {
+        color: var(--thickAsh);
+        font-size: 4rem;
+        margin-right: 6rem;
+        cursor: pointer;
+    }
+
+
+}
