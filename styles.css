@@ -562,6 +562,20 @@ footer .ownership-p {
         margin-left: 10rem;
     }
 
+    .coming-soon {
+        max-width: 15.5rem;
+        margin: unset;
+        margin-bottom: 3rem;
+        padding: 0.3rem 0;
+        border-radius: 1rem;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        font-family: einaBold;
+        color: white;
+        background: var(--thickAsh);
+    }
+
 
     /*CTA SECTION*/
     .cta {
